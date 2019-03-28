@@ -1,0 +1,37 @@
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 9527
+spring:
+  application:
+    name: MICROSERVICE-ZUUL-GATEWAY-DEV
+  profiles: dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+zuul:
+  prefix: /aigou
+  ignored-services: "*"
+  routes:
+    user.serviceId: user-provider
+    user.path: /user/**
+---
+server:
+  port: 9528
+spring:
+  application:
+    name: MICROSERVICE-ZUUL-GATEWAY-TEST
+  profiles: test
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+zuul:
+  prefix: /aigou
+  ignored-services: "*"
+  routes:
+    user.serviceId: user-provider
+    user.path: /user/**
