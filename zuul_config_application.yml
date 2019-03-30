@@ -16,8 +16,10 @@ zuul:
   prefix: /aigou
   ignored-services: "*"
   routes:
-    user.serviceId: user-provider
-    user.path: /user/**
+    plat.serviceId: user-provider
+    plat.path: /plat/**
+    product.serviceId: product-provider
+    product.path: /product/**
 ---
 server:
   port: 9528
@@ -33,5 +35,7 @@ zuul:
   prefix: /aigou
   ignored-services: "*"
   routes:
-    user.serviceId: user-provider
-    user.path: /user/**
+    plat.serviceId: user-provider
+    plat.path: /plat/**
+    product.serviceId: product-provider
+    product.path: /product/**
