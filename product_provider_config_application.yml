@@ -19,7 +19,7 @@ eureka:
       defaultZone: http://localhost:7001/eureka
 mybatis-plus:
   mapper-locations: classpath:cn/itsource/aigou/mapper/*Mapper.xml #设置mapper.xml的路径
-  type-aliases-package: cn.itsource.aigou.domain #设置别名
+  type-aliases-package: cn.itsource.aigou.domain,cn.itsource.aigou.query #设置别名
 ---
 server:
   port: 8003
@@ -38,4 +38,4 @@ eureka:
       defaultZone: http://localhost:7001/eureka
 mybatis-plus:
   mapper-locations: classpath:cn/itsource/aigou/mapper/*Mapper.xml #设置mapper.xml的路径
-  type-aliases-package: cn.itsource.aigou.domain #设置别名
+  type-aliases-package: cn.itsource.aigou.domain,cn.itsource.aigou.query #设置别名
